@@ -54,6 +54,7 @@ for page in pages:
             "description": description,
             "link": link
         }
+driver.close()
 
 df = pd.DataFrame.from_dict(dict, orient="index")
 df.to_excel("data.xlsx")
