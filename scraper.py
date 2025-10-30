@@ -8,11 +8,10 @@ from selenium.webdriver.support import expected_conditions as EC
 
 url = "https://vives.icex.es/es/es/icex---home/icex-practicas.html"
 
-options = webdriver.firefox.options.Options()
-options.unhandled_prompt_behavior = "accept"
-
-driver = webdriver.Firefox(options=options)
+driver = webdriver.Firefox()
 driver.get(url)
+
+# Accept cookies
 cookies_accept = driver.find_element(By.CSS_SELECTOR, "#btn-cookies-accept")
 cookies_accept.click()
 
